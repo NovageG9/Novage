@@ -2,7 +2,7 @@
 <html>
 
 <head>
-     <!-- Required meta tags -->
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Novage</title>
@@ -27,18 +27,18 @@
 </head>
 
 <body>
-    <div id="map" style="max-width: 220px; height: 220px"></div>
-    <script>
-      $(function () {
-  $('#map').vectorMap({
-      map: 'fr_regions_2016_merc',
-      
-      // onRegionClick: function (e, el, code) {
-         
-      // },
-  });
-});
-    </script>
-  </body>
+  <div id="map" style="max-width: 220px; height: 220px"></div>
+  <script>
+    $(function () {
+      var dataStatus = [
+
+      ];
+      $('#map').vectorMap({
+        map: 'fr_regions_2016_merc',
+        regionsSelectable: false,
+      });
+    });
+  </script>
+</body>
 
 </html>

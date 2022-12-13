@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Destinations</title>
+  <title>Detail</title>
   <!-- google fonts -->
   <link href="http://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
@@ -19,6 +19,7 @@
   <link type="text/css" href="assets/css/theme.css" rel="stylesheet">
   <!-- Demo CSS - No need to use these in your project -->
   <link type="text/css" href="assets/css/demo.css" rel="stylesheet">
+  <script src="assets/js/my.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
           </a></h1>
         <!-- if logo is image enable this   
       <a class="navbar-brand" href="#index.html">
-          <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+          <img src="assets/images/logo2.png" alt="Your logo" title="Your logo" style="height:35px;" />
       </a> -->
         <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
           data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -43,40 +44,55 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="service.html">Destinations</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">Qui sommes-nous</a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
-
           </ul>
-        </div>
-        <div class="d-lg-block d-none">
-          <a href="contact.html" class="btn btn-style btn-secondary">Get In Touch</a>
-        </div>
-        <!-- toggle switch for light and dark theme -->
-        <div class="mobile-position">
-          <nav class="navigation">
-            <div class="theme-switch-wrapper">
-              <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox">
-                <div class="mode-container">
-                  <i class="gg-sun"></i>
-                  <i class="gg-moon"></i>
-                </div>
-              </label>
+          <div class="dropdown">
+            <button class="btn btn-primary btn-icon-only rounded-circle" type="button" id="dropdown_user_account"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="btn-inner--icon">
+                <i class="fa fa-user"></i>
+              </span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdown_user_account">
+              <h6 class="dropdown-header">User menu</h6>
+              <a class="dropdown-item" href="#">
+                <i class="fa fa-envelope text-primary"></i>Messages
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fa fa-cog text-primary"></i>Settings
+              </a>
+              <div class="dropdown-divider" role="presentation"></div>
+              <a class="dropdown-item" href="inscrit.html">
+                <i class="fa fa-sign-out-alt text-primary"></i>Se connecter
+              </a>
             </div>
-          </nav>
-        </div>
-        <!-- //toggle switch for light and dark theme -->
+          </div>
+          <!-- toggle switch for light and dark theme -->
+          <div class="mobile-position">
+            <nav class="navigation">
+              <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox">
+                  <div class="mode-container">
+                    <i class="gg-sun"></i>
+                    <i class="gg-moon"></i>
+                  </div>
+                </label>
+              </div>
+            </nav>
+          </div>
+          <!-- //toggle switch for light and dark theme -->
       </nav>
     </div>
   </header>
@@ -85,9 +101,9 @@
   <section class="w3l-about-breadcrumb text-left">
     <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
       <div class="container">
-        <h2 class="title">Destinations </h2>
+        <h2 class="title">detail </h2>
         <ul class="breadcrumbs-custom-path mt-2">
-          <li><a href="#url">Accueil</a></li>
+          <li><a href="service.html">Destinations</a></li>
           <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Destinations </li>
         </ul>
       </div>
@@ -116,25 +132,20 @@
                   <div class="row mb-1">
                     <div class="col">
                       <div class="card-icon-actions card-icon-actions-lg">
-
-                        <a href="#" class="love active"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i></a>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card-icon-actions card-icon-actions-lg text-right">
-                        <a href="#"><i class="fa fa-bookmark"></i></a>
+                        <a onclick="like()" class="love active"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                        <a onclick="addFavo()"><i class="fa fa-bookmark"></i></a>
                       </div>
                     </div>
                   </div>
-                  <h6 class="heading h6 mb-3">23 likes</h6>
+                  <h6 class="heading h6 mb-3"><span id="like">23 likes</span></h6>
                   </div>
                 <div class="card-footer">
                   <div class="row ">
-                    <div class="col-10">
+                    <div class="col-10 ">
                       <form class="card-comment-box" role="form">
-                        <textarea rows="1" class="form-control textarea-autosize"
-                          placeholder="Add a comment..."></textarea>
+                        <textarea id="com" rows="1" class="form-control textarea-autosize"
+                          placeholder="Donner un commentaire..."></textarea>
+                          <a onclick="addcomme()"><i id="addCom" class="fa fa-check"></i></a>
                       </form>
                     </div>
                   </div>
@@ -156,6 +167,19 @@
       </div>
     </section>
     
+  </section>
+
+  <section class="grids-1 py-5">
+    <div class="container img-center>
+      <div id="commend" class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="heading heading-5 strong-600">Commentaires</h5>
+                <p id="comArea" class="card-text"></p>
+            </div>
+        </div>
+    </div>
+    </div>
   </section>
   <!--  //Work gallery section -->
   <!-- grids block 5 -->
