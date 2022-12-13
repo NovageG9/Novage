@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+     <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Novage</title>
+  <!-- google fonts -->
+  <link href="http://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- google fonts -->
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <!-- Template CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+  <!-- Theme CSS -->
+  <!-- Demo CSS - No need to use these in your project -->
+  <link type="text/css" href="assets/css/demo.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/jquery-jvectormap-2.0.5.css" type="text/css" media="screen" />
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+  <script src="assets/jquery-jvectormap-2.0.5.min.js"></script>
+  <script src="assets/fr_regions_2016_merc.js"></script>
+  <script src="assets/js/my.js"></script>
+</head>
+
+<body>
+    <div id="map" style="max-width: 220px; height: 220px"></div>
+    <script>
+      $(function () {
+  $('#map').vectorMap({
+      map: 'fr_regions_2016_merc',
+      
+      // onRegionClick: function (e, el, code) {
+         
+      // },
+  });
+});
+    </script>
+  </body>
+
+</html>

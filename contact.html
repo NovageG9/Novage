@@ -20,7 +20,11 @@
   <!-- Theme CSS -->
   <!-- Demo CSS - No need to use these in your project -->
   <link type="text/css" href="assets/css/demo.css" rel="stylesheet">
-  <script src="assets/js/my.js"></script>
+  
+  <link rel="stylesheet" href="assets/jquery-jvectormap-2.0.5.css" type="text/css" media="screen" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script src="assets/jquery-jvectormap-2.0.5.min.js"></script>
+    <script src="assets/fr_regions_2016_merc.js"></script>
 </head>
 
 <body>
@@ -105,6 +109,7 @@
     <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
       <div class="container py-2">
         <h2 class="title">Contactez-nous</h2>
+        <div id="map" style="width: 60px; height: 40px">dsf </div>
         <ul class="breadcrumbs-custom-path mt-2">
           <li><a href="#url">Accueil</a></li>
           <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Contact </li>
@@ -166,6 +171,7 @@
 </section>
 <!-- /contact-form -->
 
+    
   <!--/w3l-footer-29-main-->
   <footer>
     <!-- footer --> 
@@ -271,6 +277,13 @@
         $("#site-header").removeClass("nav-fixed");
       }
     });
+    $('#map').vectorMap({
+      map: 'fr_regions_2016_merc',
+      
+      onRegionClick: function (e, el, code) {
+         alert("asdf")
+      },
+  });
 
     //Main navigation Active Class Add Remove
     $(".navbar-toggler").on("click", function () {
