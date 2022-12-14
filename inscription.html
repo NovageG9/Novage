@@ -96,22 +96,20 @@
               <span class="clearfix"></span>
               <img src="assets/images/logo2.png" style="width: 50px;">
               <h4 class="heading h3 text-white pt-3 pb-5">Bienvenue,<br>
-                identifiez-vous.</h4>
+                Créer votre compte </h4>
               <form class="form-primary" action="index.html">
                 <div class="form-group">
-                  <input type="email" class="form-control" id="input_email" placeholder="email">
+                  <input type="text" class="form-control" id="input_nom" placeholder="Nom" required> 
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" id="input_password" placeholder="Password">
+                  <input type="email" class="form-control" id="input_email" placeholder="email" required>
                 </div>
-                <div class="text-left mt-4 fl"><a href="inscription.html" class="text-white ptp_font">Créer un compte?</a></div>
-                <div class="text-right mt-4 fr"><a href="#" class="text-white ptp_font">Forgot password?</a></div>
-                <br>
-                <br>
-                <button type="submit" onclick="afterLogin()" class="btn btn-style2  btn-block btn-lg bg-white mt-4">SE CONNECTER</button>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="input_password" placeholder="Password" required>
+                </div>
+                <div class="text-right mt-4"><a href="inscrit.html" class="text-white ptp_font">J'ai déjà un compte</a></div>
+                <button type="button" onclick="affterIns()" class="btn btn-style2 btn-block btn-lg bg-white mt-4">S'INSCRIRE</button>
                 <button type="reset" class="btn btn-style2 btn-block btn-lg bg-white mt-4">RESET</button>
-
-                
               </form>
             </div>
           </div>
@@ -202,6 +200,12 @@
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         }
+        // Confirmation page after registration 
+        function affterIns(){
+          window.location.href='confirmation_ins.html';
+        }
+
+
       </script>
       <!-- //move top -->
       <script>

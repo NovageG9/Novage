@@ -7123,6 +7123,7 @@ button.bg-light:focus {
 
 .bg-dark {
   background-color: #343a40 !important;
+  
 }
 
 a.bg-dark:hover,
@@ -16930,4 +16931,39 @@ p.count-text {
 .poli{
   text-align: left !important;
 }
+
+.confir{
+  text-decoration: underline #FF1654;
+  color: gray;
+}
+
+.fl{
+  float: left;
+}
+
+.fr{
+  float:right
+}
+
+.btn-style2 {
+  padding: 0px 36px;
+  font-size: 16px;
+  line-height: 52px;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: 0.3s ease-in;
+  border-radius: var(--border-radius);
+  height: 56px;
+}
+
+.btn-style2:hover {
+  color:#fff;
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.2rem rgba(230, 0, 61, 0.36);
+}
+
+.ptp_font:hover{
+  color:var(--secondary-color) !important; 
+} 
 
