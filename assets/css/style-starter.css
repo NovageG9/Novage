@@ -16942,8 +16942,11 @@ p.count-text {
 }
 
 .fr{
-  float:right
+  float:right;
 }
+
+
+
 
 .btn-style2 {
   padding: 0px 36px;
