@@ -17,5 +17,5 @@ function like(){
 }
 
 function addFavo(){
-	alert("ajouter favorable")
+	alert("Il est bien ajouté dans votre list de favorable.")
 }
