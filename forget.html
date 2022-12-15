@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
     <!-- Theme CSS -->
     <link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -38,7 +39,7 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            <li class="nav-item ">
               <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item ">
@@ -54,7 +55,7 @@
         </div>
         <div class="d-lg-block d-none">
             <div class="dropdown">
-                <button class=" btn-secondary btn btn-primary btn-icon-only rounded-circle" type="button" id="dropdown_user_account"
+                <button class="btn btn-secondary btn-primary btn-icon-only rounded-circle" type="button" id="dropdown_user_account"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="btn-inner--icon">
                     <i class="fa fa-user"></i>
@@ -108,23 +109,17 @@
               </button>
               <span class="clearfix"></span>
               <img src="assets/images/logo2.png" style="width: 50px;">
-              <h4 class="heading h3 text-white pt-3 pb-5">Bienvenue,<br>
-                identifiez-vous.</h4>
+              <h5 class="heading h3 text-white pt-3 pb-5">MOT DE PASSE OUBLIE?</h5>
               <form class="form-primary" action="index.html">
                 <div class="form-group">
-                  <input type="email" class="form-control" id="input_email" placeholder="email">
+                  <p>Saisissez l'adresse email associée à votre compte NOVAGE. <br>Nous vous enverrons un lien pour réinitialiser votre mot de passe.</p>
+                  <br>
+                  <input type="email" class="form-control" id="input_email" placeholder="email" required>
+                  <br>
+                  <P class="pColor">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</P>
                 </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" id="input_password" placeholder="Password">
-                </div>
-                <div class="text-left mt-4 fl"><a href="inscription.html" class="text-white ptp_font">Créer un compte?</a></div>
-                <div class="text-right mt-4 fr"><a href="forget.html" class="text-white ptp_font">Forgot password?</a></div>
-                <br>
-                <br>
-                <button type="submit" onclick="afterLogin()" class="btn btn-style2  btn-block btn-lg bg-white mt-4">SE CONNECTER</button>
-                <button type="reset" class="btn btn-style2 btn-block btn-lg bg-white mt-4">RESET</button>
-
-                
+                <button type="button" onclick = "conForget()" class="btn po btn-style2 btn-block btn-lg bg-white mt-4">REINITIALISER LE MOT DE PASSE</button>
+                <button type="button" onclick="retourCON()"  class="btn btn-style2 btn-block btn-lg bg-white mt-4">RETOUR A "SE CONNECTER"</button>
               </form>
             </div>
           </div>
@@ -215,7 +210,20 @@
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         }
-      
+        // Confirmation page after registration 
+        function affterIns(){
+          window.location.href='confirmation_ins.html';
+        }
+
+        function retourCON(){
+          window.location.href='inscrit.html';
+        }
+
+        function conForget(){
+          window.location.href='confirmation_for.html';
+        }
+
+
       </script>
       <!-- //move top -->
       <script>

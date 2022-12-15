@@ -16967,3 +16967,11 @@ p.count-text {
   color:var(--secondary-color) !important; 
 } 
 
+.pColor{
+  color:grey;
+}
+
+.po{
+  font-size: small !important;
+}
+
