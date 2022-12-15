@@ -14770,8 +14770,13 @@ nav ul li a:hover {
 
   .mobile-position {
     position: absolute;
-    right: 40px;
+    right: 70px;
     top: 13px;
+  }
+  .mobile-position1 {
+    position: absolute;
+    right: 40px;
+    top: 15px;
   }
 
   .navbar .navbar-brand img {
@@ -14876,8 +14881,13 @@ nav ul li a:hover {
 
   .mobile-position {
     position: absolute;
+    right: 70px;
+    top: 13px;
+  }
+  .mobile-position1 {
+    position: absolute;
     right: 40px;
-    top: 10px;
+    top: 15px;
   }
 }
 
