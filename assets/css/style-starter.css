@@ -2261,11 +2261,11 @@ pre code {
 }
 
 .form-control:focus {
-  color: #495057;
+  color: #fff;
   background-color: transparent;
-  border-color: #d2b4f5;
+  border-color: #fff;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(142, 67, 231, 0.25);
+  
 }
 
 .form-control::-webkit-input-placeholder {
